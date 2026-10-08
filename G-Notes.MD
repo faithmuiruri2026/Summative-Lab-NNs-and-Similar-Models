@@ -2,5 +2,5 @@
 
 - `` If you don't have patient to wait,``  don't uncomment this  ``REALWASTE_URL `` since it will erase the existing dataset and download new one.
 
-- **Changed RAG generation to include validation and fallback handling.**
-Replaced the basic `rag_answer()` pipeline with `rag_answer_checked()`, which validates the fine-tuned model's generated response against the retrieved policy context and falls back to the authoritative policy sections when hard faithfulness issues are detected.
+- **Change: Added precision, recall, and weighted F1-score to the evaluation summary in RAG summary** 
+Accuracy alone does not show how well the system performs across the different waste categories. Precision, recall, and F1-score provide a more reliable measure of classification performance, especially when some categories of the waste may be harder to identify than others.
